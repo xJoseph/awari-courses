@@ -1,2 +1,3 @@
-# awari-courses
-Atividades do curso Awari
+# Cursos Awari
+
+Atividades dos cursos na Awari
