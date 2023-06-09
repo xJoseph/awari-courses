@@ -1,0 +1,15 @@
+@startuml Employears
+class Employee {
+  - name: string
+  - cpf: string
+  - age: number
+  - address: string
+  - hireDate: Date
+  - salary: number
+  - rentQuantity: number
+  - status: boolean
+  - phone: string
+}
+
+Employee -- Client : "Association"
+@enduml

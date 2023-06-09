@@ -1,0 +1,9 @@
+@startuml Promotions
+class promotion {
+  - title: string
+  - description: string
+  - expirationDate: Date
+}
+
+Promotion -- Client : "Sent to"
+@enduml

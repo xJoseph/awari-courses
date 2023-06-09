@@ -1,0 +1,25 @@
+@startuml Cars
+class Car {
+  - plate: string
+  - year: number
+  - color: string
+  - model: string
+  - mileage: number
+  - dayValue: number
+  - observations: string
+}
+
+class Sport {
+  - time0to100: number
+  - improvement: string[]
+}
+
+class Utility {
+  - passengersQuantity: number
+  - bagageSize: string
+  - kmPerLiter: number
+}
+
+Car <|-- Sport
+Car <|-- Utility
+@enduml

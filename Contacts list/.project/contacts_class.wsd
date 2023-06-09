@@ -1,0 +1,31 @@
+@startuml Contacts
+
+title Class Contact
+
+class contactsList {
+  -contacts: Contact[]
+
+  +addContact()
+  +removeContact()
+  +searchContact()
+  +showContact()
+}
+
+class Contact {
+  -name: string
+  -phone: string
+  -email: string
+  -address: string
+
+  +getName()
+  +setName()
+  +getPhone()
+  +setPhone()
+  +getEmail()
+  +setEmail()
+  +getAddress()
+  +setAddress()
+  +showDetails()
+}
+
+@enduml

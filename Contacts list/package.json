@@ -1,0 +1,15 @@
+{
+  "name": "contacts-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build --clean && tsc",
+    "start": "node ./dist/src/index.js"
+  },
+  "author": "Israel Joseph",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.1.3"
+  }
+}

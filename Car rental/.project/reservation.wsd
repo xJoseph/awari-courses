@@ -1,0 +1,26 @@
+@startuml Reserves
+class Reserve {
+  - code: string
+  - status: boolean
+  - startDate: Date
+  - endDate: Date
+  - client: Cliente
+  + newReserve()
+  + cancelReserve()
+}
+
+class Cliente {
+  - name: string
+  - cpf: string
+  - age: number
+  - birthDate: Date
+  - driverLicenseNumber: string
+  - driverLicensePhoto: string
+  - driverLicenseExpirationDate: Date
+  - address: string
+  - phone: string
+  - email: string
+}
+
+Reserve -- Client
+@enduml
