@@ -23,4 +23,4 @@ npm run preview`
 
 It will open in:
 
-[http://localhost:4173/]
+[localhost:4173](http://localhost:4173/)
