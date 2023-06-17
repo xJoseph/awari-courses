@@ -17,13 +17,9 @@
 				</div>
 				<div class="article_content">
 					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-						has been the industry's standard dummy text ever since the 1500s, when an unknown
-						printer took a galley of type and scrambled it to make a type specimen book. It has
-						survived not only five centuries, but also the leap into electronic typesetting,
-						remaining essentially unchanged. It was popularised in the 1960s with the release of
-						Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-						publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						O World Wide Web Consortium anunciou uma nova medida de padronização para a confirmação
+						de pagamento seguro, que ajudará a simplificar a autenticação do usuário e aumentar a
+						segurança do pagamento durante o processo de checkout na web...
 					</p>
 				</div>
 				<div class="article_link">
@@ -36,13 +32,8 @@
 				</div>
 				<div class="article_content">
 					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-						has been the industry's standard dummy text ever since the 1500s, when an unknown
-						printer took a galley of type and scrambled it to make a type specimen book. It has
-						survived not only five centuries, but also the leap into electronic typesetting,
-						remaining essentially unchanged. It was popularised in the 1960s with the release of
-						Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-						publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						O World Wide Web Consortium (W3C) é um órgão sem fins lucrativos que estabelece padrões
+						técnicos da Web e aprova as diretrizes que regem HTML e CSS...
 					</p>
 				</div>
 				<div class="article_link">
@@ -55,13 +46,9 @@
 				</div>
 				<div class="article_content">
 					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-						has been the industry's standard dummy text ever since the 1500s, when an unknown
-						printer took a galley of type and scrambled it to make a type specimen book. It has
-						survived not only five centuries, but also the leap into electronic typesetting,
-						remaining essentially unchanged. It was popularised in the 1960s with the release of
-						Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-						publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						GitHub, which has been doing a brisk business selling subscriptions to its
+						litigation-encumbered Copilot AI helper, surveyed 500 US-based developers to find if any
+						of them are already using AI coding tools at work
 					</p>
 				</div>
 				<div class="article_link">
@@ -89,7 +76,7 @@
 
 	.articles {
 		display: flex;
-		justify-content: center;
+		/* justify-content: space-evenly; */
 		align-items: center;
 		font-size: 1.2rem;
 		padding: 0px 10px;
@@ -114,5 +101,18 @@
 	.article_link {
 		text-align: center;
 		font-size: 1rem;
+	}
+
+	@media screen and (max-width: 768px) {
+		.articles {
+			width: 100%;
+			display: grid;
+			grid-row: 1;
+			grid-column: auto;
+		}
+
+		.article_content {
+			margin-right: 20px;
+		}
 	}
 </style>
