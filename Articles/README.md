@@ -18,7 +18,7 @@ npm run build
 
 You can preview the production build with :
 ```bash
-npm run preview`
+npm run preview
 ```
 
 It will open in:
