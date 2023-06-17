@@ -7,8 +7,12 @@
 </div>
 
 <footer>
-    <p>Criado por Israel Joseph</p>
+	<p>Criado por Israel Joseph</p>
 </footer>
+
+<a class="home_button" href="/">
+	<img src="home_button.png" alt="Home Button" />
+</a>
 
 <style>
 	header {
@@ -18,7 +22,7 @@
 		width: 100%;
 		height: 50px;
 		background-color: #00aeff;
-        color: #ffffff;
+		color: #ffffff;
 	}
 
 	.item_menu {
@@ -29,7 +33,7 @@
 		height: 100%;
 		padding: 0px 5px;
 		margin: 0px 5px;
-        color: #ffffff;
+		color: #ffffff;
 	}
 
 	.link {
@@ -51,14 +55,25 @@
 		height: 100%;
 	}
 
-    footer {
+	footer {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		width: 100%;
 		height: 50px;
 		background-color: #00aeff;
-        color: #ffffff;
-        font-size: large;
+		color: #ffffff;
+		font-size: large;
+	}
+	.home_button {
+		right: 50px;
+		bottom: 40px;
+		z-index: 100;
+		display: block;
+		position: fixed;
+	}
+	.home_button > img {
+		width: 48px;
+		height: 48px;
 	}
 </style>
