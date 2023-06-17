@@ -23,7 +23,7 @@
 					</p>
 				</div>
 				<div class="article_link">
-					<a href="/article1">Read More...</a>
+					<a href="/article1">Ler artigo completo...</a>
 				</div>
 			</div>
 			<div class="article">
@@ -37,7 +37,7 @@
 					</p>
 				</div>
 				<div class="article_link">
-					<a href="/article2">Read More...</a>
+					<a href="/article2">Ler artigo completo...</a>
 				</div>
 			</div>
 			<div class="article">
@@ -52,7 +52,7 @@
 					</p>
 				</div>
 				<div class="article_link">
-					<a href="/article3">Read More...</a>
+					<a href="/article3">Ler artigo completo...</a>
 				</div>
 			</div>
 		</div>
