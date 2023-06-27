@@ -125,11 +125,11 @@
 	}
 	.article_image {
 		width: 100%;
-		height: 600px;
+		height: auto;
 	}
 	.article_embed {
 		width: 100%;
-		height: 600px;
+		height: auto;
 	}
 	.article_content > p {
 		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
