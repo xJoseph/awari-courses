@@ -8,53 +8,51 @@
 
 	<section>
 		<div class="title">
-			<h2>Artigos</h2>
+			<h2>Formulário de contato</h2>
 		</div>
-		<div class="articles">
-			<div class="article">
-				<div class="article_title">
-					<h3>Artigo 1</h3>
+		<div class="form">
+			<form target="_self">
+				<div class="form_box">
+					<label>
+						Nome:
+						<div class="input">
+							<input
+								id="name"
+								type="text"
+								placeholder="João da Silva"
+							/>
+						</div>
+					</label>
 				</div>
-				<div class="article_content">
-					<p>
-						O World Wide Web Consortium anunciou uma nova medida de padronização para a confirmação
-						de pagamento seguro, que ajudará a simplificar a autenticação do usuário e aumentar a
-						segurança do pagamento durante o processo de checkout na web...
-					</p>
+				<div class="form_box">
+					<label>
+						Email:
+						<div class="input">
+							<input
+								id="email"
+								type="text"
+								placeholder="joaodasilva@email.com"
+							/>
+						</div>
+					</label>
 				</div>
-				<div class="article_link">
-					<a href="/article1">Ler artigo completo...</a>
+				<div class="form_box">
+					<label>
+						Mensagem:
+						<div class="message_box">
+							<input
+								id="message"
+								type="text"
+								placeholder="Escreva a sua mensagem aqui."
+								autocomplete="off"
+							/>
+						</div>
+					</label>
 				</div>
-			</div>
-			<div class="article">
-				<div class="article_title">
-					<h3>Artigo 2</h3>
+				<div class="form_button">
+					<button type="submit">Enviar</button>
 				</div>
-				<div class="article_content">
-					<p>
-						O World Wide Web Consortium (W3C) é um órgão sem fins lucrativos que estabelece padrões
-						técnicos da Web e aprova as diretrizes que regem HTML e CSS...
-					</p>
-				</div>
-				<div class="article_link">
-					<a href="/article2">Ler artigo completo...</a>
-				</div>
-			</div>
-			<div class="article">
-				<div class="article_title">
-					<h3>Artigo 3</h3>
-				</div>
-				<div class="article_content">
-					<p>
-						GitHub, which has been doing a brisk business selling subscriptions to its
-						litigation-encumbered Copilot AI helper, surveyed 500 US-based developers to find if any
-						of them are already using AI coding tools at work
-					</p>
-				</div>
-				<div class="article_link">
-					<a href="/article3">Ler artigo completo...</a>
-				</div>
-			</div>
+			</form>
 		</div>
 	</section>
 </div>
@@ -64,55 +62,58 @@
 		display: grid;
 		width: 100%;
 	}
-
 	section {
 		width: 100%;
 	}
-
 	section > .title {
 		font-size: 1.4rem;
 		padding-left: 50px;
 	}
-
-	.articles {
+	.form {
 		display: flex;
-		/* justify-content: space-evenly; */
+		justify-content: center;
 		align-items: center;
+		width: 100%;
+		height: auto;
 		font-size: 1.2rem;
 		padding: 0px 10px;
 		margin-bottom: 40px;
 	}
-
-	.article {
-		padding: 0px 20px;
-	}
-
-	.article_title {
+	.form_box {
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		width: 100%;
+		height: auto;
 	}
-
-	.article_content {
-		text-align: justify;
-		font-size: 1rem;
+	.input {
+		display: flex;
+		width: 100%;
 	}
-
-	.article_link {
-		text-align: center;
-		font-size: 1rem;
+	.message_box {
+		display: flex;
+		height: 100px;
 	}
-
-	@media screen and (max-width: 768px) {
-		.articles {
-			width: 100%;
-			display: grid;
-			grid-row: 1;
-			grid-column: auto;
-		}
-
-		.article_content {
-			margin-right: 20px;
-		}
+	.form_button {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	.form_button > button {
+		font-weight: bolder;
+		color: #000;
+		margin-top: 20px;
+		width: 70%;
+		height: 30px;
+		background-color: #00aeff9c;
+		border: none;
+		transition: all 2s;
+	}
+	.form_button > button:hover {
+		width: 250%;
+		height: 50px;
+		color: #fff;
+		background-color: #00aeff;
+		border: 1px solid #000;
+		transition: all 2s;
 	}
 </style>
