@@ -1,7 +1,7 @@
 <div class="container">
 	<section>
 		<div class="title">
-			<h1>Bem-vindo(a) a página de artigos</h1>
+			<h1>Bem-vindo(a) a página do formulário de contato</h1>
 		</div>
 		<hr style="color: #ffffff" />
 	</section>
