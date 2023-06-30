@@ -1,10 +1,12 @@
+import { UtilCar, SportCar } from "./car";
+
 class People {
 
-    name: string;
-    cpf: string;
-    age: number;
-    address: string;
-    phone: string;
+    public name: string;
+    public cpf: string;
+    public age: number;
+    public address: string;
+    public phone: string;
 
     constructor(name: string, cpf: string, age: number, address: string, phone: number) {
         const _cpf = cpf;
@@ -20,43 +22,55 @@ class People {
 
 export class Employee extends People {
 
-    hireDate: Date;
-    wage: string;
-    rentsMade: number;
-    isActive: boolean;
+    public static hireDate: Date;
+    public static wage: string;
+    public static rentsMade: number;
+    public static isActive: boolean;
 
     constructor(name: string, cpf: string, age: number, address: string, phone: number, hireDate: number, wage: number, rentsMade: number, isActive: boolean) {
         const _hireDate = String(hireDate);
 
         super(name, cpf, age, address, phone);
-        this.hireDate = new Date(Number(_hireDate.slice(0, 4)), Number(_hireDate.slice(4, 6)) - 1, Number(_hireDate.slice(6)));
-        this.wage = "R$ " + wage + ".00";
-        this.rentsMade = rentsMade;
-        this.isActive = isActive;
+        Employee.hireDate = new Date(Number(_hireDate.slice(0, 4)), Number(_hireDate.slice(4, 6)) - 1, Number(_hireDate.slice(6)));
+        Employee.wage = "R$ " + wage + ".00";
+        Employee.rentsMade = rentsMade;
+        Employee.isActive = isActive;
     }
 }
 
 export class Client extends People {
 
-    birthDate: Date;
-    driverLicenseNumber: number;
-    driverLicensePhoto: string;
-    driverLicenseExpirationDate: Date;
-    email: string;
+    public static birthDate: Date;
+    public static driverLicenseNumber: number;
+    public static driverLicensePhoto: string;
+    public static driverLicenseExpirationDate: Date;
+    public static email: string;
 
     constructor(name: string, cpf: string, age: number, address: string, phone: number, birthDate: number, driverLicenseNumber: number, driverLicensePhoto: string, driverLicenseExpirationDate: number, email: string) {
         const _birthDate = String(birthDate);
         const _driverLicenseExpirationDate = String(driverLicenseExpirationDate);
 
         super(name, cpf, age, address, phone)
-        this.birthDate = new Date(Number(_birthDate.slice(0, 4)), Number(_birthDate.slice(4, 6)) - 1, Number(_birthDate.slice(6)));
-        this.driverLicenseNumber = driverLicenseNumber;
-        this.driverLicensePhoto = driverLicensePhoto;
-        this.driverLicenseExpirationDate = new Date(Number(_driverLicenseExpirationDate.slice(0, 4)), Number(_driverLicenseExpirationDate.slice(4, 6)) - 1, Number(_driverLicenseExpirationDate.slice(6)));
-        this.email = email;
+        Client.birthDate = new Date(Number(_birthDate.slice(0, 4)), Number(_birthDate.slice(4, 6)) - 1, Number(_birthDate.slice(6)));
+        Client.driverLicenseNumber = driverLicenseNumber;
+        Client.driverLicensePhoto = driverLicensePhoto;
+        Client.driverLicenseExpirationDate = new Date(Number(_driverLicenseExpirationDate.slice(0, 4)), Number(_driverLicenseExpirationDate.slice(4, 6)) - 1, Number(_driverLicenseExpirationDate.slice(6)));
+        Client.email = email;
     }
 
-    getEmail() {
-        return this.email;
+    public getEmail() {
+        return Client.email;
+    }
+
+    public getName() {
+        return this.name;
+    }
+
+    public createReserve(car: UtilCar | SportCar) {
+        // if (car. === false) {
+            console.log(`Reserva criado para o cliente ${this.name}`);
+
+        // }
+
     }
 }

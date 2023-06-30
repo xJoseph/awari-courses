@@ -1,19 +1,23 @@
+import { Client } from "./people";
+
 export default class Promotion {
-    title: string;
-    description: string;
-    expirationDate: Date;
+    public static title: string;
+    public static message: string;
+    public static expirationDate: Date;
     static sender = process.env["LOCALIZA_EMAIL"];
 
-    constructor(title: string, description: string, expirationDate: number) {
+    constructor(title: string, message: string, expirationDate: number) {
         const _expirationDate = String(expirationDate);
 
-        this.title = title;
-        this.description = description;
-        this.expirationDate = new Date(Number(_expirationDate.slice(0, 4)), Number(_expirationDate.slice(4, 6)) - 1, Number(_expirationDate.slice(6)));
+        Promotion.title = title;
+        Promotion.message = message;
+        Promotion.expirationDate = new Date(Number(_expirationDate.slice(0, 4)), Number(_expirationDate.slice(4, 6)) - 1, Number(_expirationDate.slice(6)));
     }
 
-    sendEmail(email: string) {
-        console.log("E-mail enviado.");
+    public static sendEmail(client: Client) {
+        console.log(`Promoção com o assunto: ${this.title}\nMensagem: ${this.message}\nE expirará em: ${this.expirationDate}`);
+        
+        console.log(`Email enviado para o cliente ${client.getName()} com o email ${client.getEmail()}`);
 
     }
 }

@@ -3,6 +3,7 @@ import readline from 'node:readline';
 import { SportCar, UtilCar } from "./class/car";
 import { Employee, Client } from "./class/people";
 import Promotion from "./class/mail_promotion";
+import Reserve from './class/reserve';
 // import Localiza from '../src/class/search';
 
 // const localiza = new Localiza();
@@ -26,7 +27,7 @@ import Promotion from "./class/mail_promotion";
 
 const employee = new Employee("Joseph", "09754461937", 35, "Rua João Licério", 5541997120635, 20220619, 95000, 0, true);
 console.log(employee);
-const client = new Client("Chelsia", "09875454931", 25, "Rua Rosa Machio Batistão", 5541997220798, 19951128, 5149873, "image.png", 20300522, "israel-joseph@hotmail.com")
+const client = new Client("Chelsia", "09875454931", 25, "Rua Rosa Machio Batistão", 5541997220798, 19951128, 5149873, "image.png", 20300522, "chelsia.souza@gmail.com")
 console.log(client);
 const promotion = new Promotion("Cupom de desconto de 10% - Localiza", "Utilize o seguinte cupom para receber 10% de desconto na sua próxima compra!", 20231101);
 console.log(promotion);
@@ -40,3 +41,10 @@ console.log(car1);
 console.log(car2);
 console.log(car3);
 console.log(car4);
+
+car1.newImprovement("Melhorar a pintura");
+car1.getImprovements()
+
+Promotion.sendEmail(client);
+
+const reserve1 = new Reserve("LCZ", true, 20221020, 20231020, client);

@@ -1,21 +1,31 @@
 import { Client } from "./people";
 
 export default class Reserve {
-    constructor(
-        public code: string,
-        public status: boolean,
-        public startDate: Date,
-        public expirationDate: Date,
-        public client: Client
-    ) { }
+    public static code: string;
+    public static status: boolean;
+    public static startDate: Date;
+    public static expirationDate: Date;
+
+    constructor(code: string, status: boolean, startDate: number, expirationDate: number, client: Client) {
+        const _startDate = String(startDate);
+        const _expirationDate = String(expirationDate);
+
+        Reserve.code = code;
+        Reserve.status = status;
+        Reserve.startDate = new Date(Number(_startDate.slice(0, 4)), Number(_startDate.slice(4, 6)) - 1, Number(_startDate.slice(6)));
+        Reserve.expirationDate = new Date(Number(_expirationDate.slice(0, 4)), Number(_expirationDate.slice(4, 6)) - 1, Number(_expirationDate.slice(6)));
+    }
 
     setInactive() {
-        this.status = false;
+        Reserve.status = false;
+        console.log("Reserva cancelada");
+        
+    }
+    setActive() {
+        Reserve.status = true;
+        console.log("Reserva criada");
     }
     getStatus() {
-        return this.status;
-    }
-    getClient() {
-        return this.client;
+        return Reserve.status;
     }
 }
